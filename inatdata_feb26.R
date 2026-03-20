@@ -11,8 +11,11 @@ library(vegan)
 
 # import your data 
 path <- "C:/Users/mered/OneDrive/Desktop/iNaturalistData/" #fill with your own path
-inat <- read.csv("C:/Users/mered/OneDrive/Desktop/iNaturalistData/inatdata.csv") #fill witih your own path
-    
+inat <- read.csv(paste(path, "inatdata.csv")) 
+# The point of having the path variable is to not have to fill it in multiple times
+# But actually what you really want is for us all to read from the same cloud 
+# version: 
+inat <- read.csv("https://raw.githubusercontent.com/leafhopping/iNat-ant-tending/refs/heads/main/inatdata.csv")
 
 # using viridis to assign a different color to each family 
 
